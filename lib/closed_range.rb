@@ -8,4 +8,8 @@ class ClosedRange
       @upper_num = second_num
     end
   end
+
+  def display
+    return "[#{@lower_num}},#{@upper_num}]"
+  end
 end
