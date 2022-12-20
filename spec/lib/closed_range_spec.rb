@@ -43,25 +43,25 @@ describe ClosedRange do
     let(:second_num) { 7 }
     subject { closed_range_instance.inspect_containment_closed_range(validation_value) }
     context '検証値 < 下端の場合' do
-      let(:validation_value) { 1 }
+      let(:validation_value) { 2 }
       example 'falseを返却すること' do
         expect(subject).to eq false
       end
     end
     context '検証値 = 下端の場合' do
       let(:validation_value) { 3 }
-      example 'falseを返却すること' do
+      example 'trueを返却すること' do
         expect(subject).to eq true
       end
     end
     context '検証値 = 上端の場合' do
       let(:validation_value) { 7 }
-      example 'falseを返却すること' do
+      example 'trueを返却すること' do
         expect(subject).to eq true
       end
     end
     context '検証値 > 上端の場合' do
-      let(:validation_value) { 10 }
+      let(:validation_value) { 8 }
       example 'falseを返却すること' do
         expect(subject).to eq false
       end
