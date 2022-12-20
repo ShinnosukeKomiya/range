@@ -39,10 +39,8 @@ describe ClosedRange do
     end
   end
   describe '#inspect_containment_closed_range' do
-    let(:initial_num) { lower_num }
-    let(:second_num) { upper_num }
-    let(:lower_num) { 3 }
-    let(:upper_num) { 7 }
+    let(:initial_num) { 3 }
+    let(:second_num) { 7 }
     subject { closed_range_instance.inspect_containment_closed_range(validation_value) }
     context '検証値 < 下端の場合' do
       let(:validation_value) { 1 }
