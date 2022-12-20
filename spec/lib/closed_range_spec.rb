@@ -28,4 +28,14 @@ describe ClosedRange do
       end
     end
   end
+  describe '#display' do
+    let(:initial_num) { lower_num }
+    let(:second_num) { upper_num }
+    let(:lower_num) { 1 }
+    let(:upper_num) { 2 }
+    subject { closed_range_instance.display }
+    example '自身の閉区間の範囲を返すこと' do
+      expect(subject).to eq "[#{lower_num}},#{upper_num}]"
+    end
+  end
 end
